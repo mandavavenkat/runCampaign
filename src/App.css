@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  background: linear-gradient(#4a548d, #83bed5);
+  height: 100vh;
+  margin-top: 0vw;
+  padding-top: 0vw;
+  box-sizing: border-box;
+  position: relative;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input{
+  width:90%;
+  margin-top: 0.5vw;
+  height:2.5vw;
+  border: 0.1vw solid black;
+  margin-left: 2%;
+  border-radius: 0.3vw;
+  font-size: 1vw;
+}
+span{
+  font-size: 1.3vw;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top:0.5vw;
+}
+textarea{
+  font-size: 1.2vw;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-top:0.5vw;
+  border: 0.1vw solid black;
+  border-radius: 0.5vw;
+  width:92%;
+}
+.subdiv_campaign{
+  width:fit-content;
+  height: fit-content;
+  background-color: #E8ECF1;
   display: flex;
   flex-direction: column;
+  margin-left: 34%;
+  padding: 0.7vw;
+  border-radius: 0.5vw;
+}
+button{
+  height: 3vw;
+  width: fit-content;
+  margin-top: 0.5vw;
+  color: #FFFFFF;
+  background-color: #4a548d;
+  font-size: 1.5vw;
+  padding: 1vw;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-left:30% ;
 }
-
-.App-link {
-  color: #61dafb;
+h1{
+  color: #FFFFFF;
+  font-family:sans-serif;
+  margin-left: 2%
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lengthdata{
+  color: #FFFFFF;
+  font-size: 1.5vw;
 }

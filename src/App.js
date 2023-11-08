@@ -102,22 +102,22 @@ function App() {
       
       <div className='subdiv_campaign' >
         <span>User Name</span>
-        <input onChange={(e) => handlechalgeUsername(e)} />
+        <input placeholder='Enter User Name' onChange={(e) => handlechalgeUsername(e)} />
         <span>Token</span>
-        <input onChange={(e) => handlechangeToken(e)} />
+        <input placeholder='Enter Token' onChange={(e) => handlechangeToken(e)} />
         <span>Plan ID</span>
-        <input onChange={(e) => handlechangePlanid(e)} />
+        <input placeholder='Enter Plan ID' onChange={(e) => handlechangePlanid(e)} />
         <span>Client</span>
-        <input onChange={(e) => handlechangeClient(e)} />
+        <input placeholder='Enter Client'  onChange={(e) => handlechangeClient(e)} />
         <span>Event Name</span>
-        <input onChange={(e) => handleChangeEventname(e)} />
+        <input placeholder='Enter Event Name'  onChange={(e) => handleChangeEventname(e)} />
         <span>Extenssion</span>
-        <input onChange={(e) => handlechangeExtenssion(e)} />
+        <input placeholder='Enter Extenssion'  onChange={(e) => handlechangeExtenssion(e)} />
         <span>Phone Numbers</span>
         <textarea
           rows="5"
           cols="40"
-          placeholder="Enter numbers separated by newlines"
+          placeholder="Enter Phone Numbers separated by newlines"
           value={numbersdata}
           onChange={handleTextareaChange}
         />

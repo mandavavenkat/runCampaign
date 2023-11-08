@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import './App.css'
 
 function App() {
-  const [inputText, setInputText] = useState(''); 
   const [formattedNumbers, setFormattedNumbers] = useState([]); 
   const [payload, setPayload] = useState({
     "phone_numbers": [],

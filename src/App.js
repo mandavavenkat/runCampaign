@@ -1,9 +1,9 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css'
 
 function App() {
-  const [formattedNumbers, setFormattedNumbers] = useState([]); 
+  const [formattedNumbers, setFormattedNumbers] = useState([]);
   const [payload, setPayload] = useState({
     "phone_numbers": [],
     "username": "",
@@ -13,7 +13,7 @@ function App() {
     "event_name": "",
     "extension": ""
   });
-  const [numbersdata,setNumbersdata]=useState()
+  const [numbersdata, setNumbersdata] = useState()
 
   const handleTextareaChange = (event) => {
     setNumbersdata(event.target.value)
@@ -25,15 +25,14 @@ function App() {
       ...payload,
       "phone_numbers": formattedIntegers
     });
-    console.log(formattedIntegers);
   };
-  
+
   const formatNumbers = (text) => {
     const numbers = text.split(/[, \n]+/).filter((num) => num.trim() !== '');
- // Split by comma, space, or newline
+    // Split by comma, space, or newline
     return numbers;
   };
-  
+
 
   console.log('num', formattedNumbers);
 
@@ -90,16 +89,16 @@ function App() {
         body: JSON.stringify(payload),
       })
       .then((resp) => {
-        console.log(resp);
+        // console.log(resp);
       })
   }
-
+ 
   return (
     <div className="App">
       <div>
-      <h1>Campaign</h1>
+        <h1>Campaign</h1>
       </div>
-      
+
       <div className='subdiv_campaign' >
         <span>User Name</span>
         <input placeholder='Enter User Name' onChange={(e) => handlechalgeUsername(e)} />
@@ -108,11 +107,11 @@ function App() {
         <span>Plan ID</span>
         <input placeholder='Enter Plan ID' onChange={(e) => handlechangePlanid(e)} />
         <span>Client</span>
-        <input placeholder='Enter Client'  onChange={(e) => handlechangeClient(e)} />
+        <input placeholder='Enter Client' onChange={(e) => handlechangeClient(e)} />
         <span>Event Name</span>
-        <input placeholder='Enter Event Name'  onChange={(e) => handleChangeEventname(e)} />
+        <input placeholder='Enter Event Name' onChange={(e) => handleChangeEventname(e)} />
         <span>Extenssion</span>
-        <input placeholder='Enter Extenssion'  onChange={(e) => handlechangeExtenssion(e)} />
+        <input placeholder='Enter Extenssion' onChange={(e) => handlechangeExtenssion(e)} />
         <span>Phone Numbers</span>
         <textarea
           rows="5"
@@ -121,13 +120,13 @@ function App() {
           value={numbersdata}
           onChange={handleTextareaChange}
         />
-        <button onClick={hanldeClickruncampaign}>
+        <button onClick={hanldeClickruncampaign} >
           Run Campaign
         </button>
       </div>
       <div>
         {
-          formattedNumbers.length > 0 ?<span className='lengthdata'>Total mobile numbers:{formattedNumbers.length}</span>:null
+          formattedNumbers.length > 0 ? <span className='lengthdata'>Total mobile numbers:{formattedNumbers.length}</span> : null
         }
       </div>
     </div>
@@ -139,4 +138,3 @@ export default App;
 
 
 
-  
